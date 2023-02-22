@@ -2,17 +2,15 @@
 
 /** 
  * print_alphabet -entry point
- * main - check the code
- * Return: Always 0.
+ * Return: void
  */
 void print_alphabet(void);
 {
-char c = 'a';
+char c;
 
-while (c <= 'z')
+for (c = 'a'; c <= 'z'; c++)
 {_putchar(c);
-c++;
-}
 
+}
 _putchar('\n');
 }
