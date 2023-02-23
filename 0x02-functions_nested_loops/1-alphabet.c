@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * print_alphabet- A program which prints an alphabet
+ * print_alphabet- Make an alphabet
  *
- * Return: void.
+ * Return: void
  */
 void print_alphabet(void)
 {0
     char c;
-    for (c = 'a'; c <= 'z'; c++)
+    for ( c = 'a'; c <= 'z'; c++)
     {
     _putchar(c);
     }
