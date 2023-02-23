@@ -3,7 +3,7 @@
  * print_alphabet - make an alphabet x 10
  * Return: void
  */
-void print_alphabet_x10(void);
+void print_alphabet_x10(void)
 {
 char c;
 int i = 0;
