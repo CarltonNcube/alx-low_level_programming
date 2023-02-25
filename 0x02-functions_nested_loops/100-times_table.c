@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_times_table - prints time table of the input
+ * times_table - prints time table of the input
  * starting with 0.
  * @n: the value of the times table to be printed.
  */
@@ -13,7 +13,7 @@ void print_times_table(int n)
 	for (num =0; num <= n; mult++)
 	{
 	_putchar('0');
-	for (mult = 1; mult <= n; mullt++)
+	for (mult = 1; mult <= n; mult++)
 	{
 	_putchar(',');
 	_putchar(' ');
