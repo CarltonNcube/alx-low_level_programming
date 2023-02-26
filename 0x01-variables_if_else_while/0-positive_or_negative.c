@@ -4,9 +4,9 @@
 
 /**
  * main - prints if number is positive , zero or negative
- * return: (success)
+ * return: success
 */
- 
+
 int main(void)
 {
 	int n;
@@ -22,7 +22,7 @@ int main(void)
 	{
 	printf("%d is zero\n", n);
 	}
-	else 
+	else
 	{
 	printf("%d is negative\n", n);
 	}
