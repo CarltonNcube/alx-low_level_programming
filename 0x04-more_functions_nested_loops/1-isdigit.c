@@ -10,8 +10,8 @@ int _isdigit(int x)
 {
 	if (x >= 48 && x <= 58)
 	{
-	return(1);
+	return (1);
 	}
-	return(0);
+	return (0);
 
 }
