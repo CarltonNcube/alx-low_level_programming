@@ -9,24 +9,26 @@
 int main(void)
 
 {
-	int d, p;
+	int a, b, c;
 
-	for (d = '0'; d < '9'; d++)
+	for (a = '0'; a < '9'; a++)
 	{
-
-	for (p = d + 1; p <= '9'; p++)
+	for (b = a + 1; b <= '9'; b++)
 	{
-	if (p != d)
+	for (c = b + 1; c <= '9'; c++)
 	{
-	putchar(d);
-	putchar(p);
-	if (d == '8' && p == '9')
+	if ((b != a) != c)
+	{
+	putchar(a);
+	putchar(b);
+	putchar(c);
+	if (a == '7' && b == '8')
 	continue;
 	putchar(',');
 	putchar(' ');
 	}
 	}
 	}
+	}
 	putchar('\n');
 	return (0);
-}
