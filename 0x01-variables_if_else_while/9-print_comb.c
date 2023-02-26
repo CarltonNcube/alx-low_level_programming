@@ -3,10 +3,9 @@
 #include <time.h>
 
 /**
- * main - Entry point 
+ * main - Entry point
  * Return: Always (0) success
  */
-
 int main(void)
 {
 int d;
@@ -21,5 +20,5 @@ putchar(' ');
 }
 }
 putchar('\n');
-return (0);
+return (0):
 }
