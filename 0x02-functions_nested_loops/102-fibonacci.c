@@ -2,7 +2,7 @@
 
 /**
  * main - prints the first 52 fibonacci numbers
- * return: nothing! 
+ * Return: nothing! 
  */
 int main(void)
 {
@@ -26,4 +26,3 @@ int main(void)
 	printf("\n");
 	return (0);
 }
-
