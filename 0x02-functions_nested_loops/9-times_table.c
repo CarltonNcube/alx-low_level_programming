@@ -1,4 +1,4 @@
-#include "main"
+#include "main.h"
 
 /**
  * time_table - Prints the 9 times table starting with 0
