@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * print diagsums - Every point
+ * print_diagsums - Every point
  * @a: input
  * @size: input
  * Return: Always 0 (success)
