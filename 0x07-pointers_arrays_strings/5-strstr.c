@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 
-/*
+/**
  * _strstr - Entry point
  * @needle: input
  * @haystack: input
@@ -24,5 +24,5 @@ char *_strstr(char *haystack, char *needle)
 		if (*two == '\0')
 		return (haystack);
 	}
-	Return (NULL);
+	return (NULL);
 }
