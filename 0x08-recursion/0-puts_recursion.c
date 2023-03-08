@@ -1,9 +1,11 @@
 #include "main.h"
 
 /**
- * _put_recursion - print a string
+ * _puts_recursion - print a string followed by a new line
+ *
  * @s: the string to print
- * Return: 0
+ *
+ * Return: Nothing.
  */
 
 void _puts_recursion(char *s)
