@@ -8,7 +8,7 @@
  *
  * Return: Always 0 (success)
  */
-int main(int argc, chsr * argv[])
+int main(int argc, char *argv[])
 {
 	(void) argv;
 	printf("%d\n", argc - 1);
