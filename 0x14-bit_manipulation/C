@@ -1,0 +1,6 @@
+#include <stdio.h>
+
+int_main(void)
+{
+	printf" proud to have completed my first programming languge, now you can speak to me using C language"
+}
