@@ -4,46 +4,48 @@
 #include "lists.h"
 
 /**
- * main - check the code
+ * insert_dnodeint_at_index - Insert a new node at a given position.
+ * @h: Pointer to a pointer to the head of the list.
+ * @idx: Index at which the new node should be inserted.
+ * @n: Value to store in the new node.
  *
- * Return: Always EXIT_SUCCESS.
+ * Return: Address of the new node, or NULL if the operation fails.
  */
 
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-    dlistint_t *new_node = NULL;
-    dlistint_t *temp = *h;
-    unsigned int i = 0;
+	dlistint_t *new_node = NULL;
+	dlistint_t *temp = *h;
+	unsigned int i = 0;
 
-    if (h == NULL)
-        return (NULL);
+	if (h == NULL)
+		return (NULL);
 
-    new_node = malloc(sizeof(dlistint_t));
-    if (new_node == NULL)
-        return (NULL);
-    new_node->n = n;
+	new_node = malloc(sizeof(dlistint_t));
+	if (new_node == NULL)
+		return (NULL);
+	new_node->n = n;
 
-    if (idx == 0)
-    {
-        new_node->next = *h;
-        new_node->prev = NULL;
-        if (*h != NULL)
-            (*h)->prev = new_node;
-        *h = new_node;
-        return (new_node);
-    }
+	if (idx == 0)
+	{
+		new_node->next = *h;
+		new_node->prev = NULL;
+		if (*h != NULL)
+			(*h)->prev = new_node;
+		*h = new_node;
+		return (new_node);
+	}
 
-    for (; temp != NULL && i < idx - 1; i++)
-        temp = temp->next;
+	for (; temp != NULL && i < idx - 1; i++)
+		temp = temp->next;
 
-    if (temp == NULL)
-        return (NULL);
+	if (temp == NULL)
+		return (NULL);
 
-    new_node->next = temp->next;
-    new_node->prev = temp;
-    if (temp->next != NULL)
-        temp->next->prev = new_node;
-    temp->next = new_node;
-
-    return (new_node);
-} 
+	new_node->next = temp->next;
+	new_node->prev = temp;
+	if (temp->next != NULL)
+		temp->next->prev = new_node;
+	temp->next = new_node;
+	return (new_node);
+}
