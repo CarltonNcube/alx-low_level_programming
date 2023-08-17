@@ -5,7 +5,7 @@
 
 /**
  * add_dnodeint_end - Adds a new node with a given integer value at the end
- *                    of a doubly linked list.
+ *			of a doubly linked list.
  * @head: A double pointer to the head of the doubly linked list.
  * @n: The integer value to be stored in the new node.
  *
@@ -33,8 +33,8 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 	while (last->next)
 		last = last->next;
 
-		last->next = new_node;
-		new_node->prev = last;
+	last->next = new_node;
+	new_node->prev = last;
 
 	return (new_node);
 }
