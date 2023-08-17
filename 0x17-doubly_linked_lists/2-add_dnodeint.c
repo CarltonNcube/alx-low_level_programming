@@ -9,6 +9,7 @@
  * @n: Value to be stored in the new node.
  * Return: Address of the new node, or NULL on failure.
  */
+
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
     dlistint_t *new_node;
@@ -31,10 +32,3 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 
     return (new_node);
 }
-
-int main(void)
-{
-    // Test your function here if needed
-    return (EXIT_SUCCESS);
-}
-
