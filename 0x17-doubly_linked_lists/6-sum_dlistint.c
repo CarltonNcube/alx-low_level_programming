@@ -4,9 +4,10 @@
 #include "lists.h"
 
 /**
- * main - check the code
+ * sum_dlistint - Calculate the sum of all elements in a doubly linked list.
+ * @head: A pointer to the head node of the doubly linked list.
  *
- * Return: Always EXIT_SUCCESS.
+ * Return: The sum of all elements in the list. If the list is empty, return 0.
  */
 
 int sum_dlistint(dlistint_t *head)
