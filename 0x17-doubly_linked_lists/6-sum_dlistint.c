@@ -11,14 +11,13 @@
 
 int sum_dlistint(dlistint_t *head)
 {
-    register int sum = 0;
-    dlistint_t *current = head;
+	register int sum = 0;
+	dlistint_t *current = head;
 
-    while (current)
-    {
-        sum += current->n;
-        current = current->next;
-    }
-
-    return (sum);
+	while (current)
+	{
+		sum += current->n;
+		current = current->next;
+	}
+	return (sum);
 }
