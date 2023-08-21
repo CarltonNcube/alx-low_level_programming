@@ -1,0 +1,12 @@
+#!/bin/bash
+import ctypes
+
+lib = ctypes.CDLL('./liball.so')
+
+lib.add.argtypes = [ctypes.c_int, ctypes.c_int]
+lib.add.restype = ctypes.c_int
+
+a = 10
+b = 20
+
+print(f"{a} + {b} = {lib.add(a, b)}")
