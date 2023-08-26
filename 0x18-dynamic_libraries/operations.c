@@ -44,7 +44,7 @@ int mul(int a, int b)
  *
  * Return: The quotient of a and b
  */
-int my_div(int a, int b)
+int _div(int a, int b)
 {
         if (b != 0)
         {
