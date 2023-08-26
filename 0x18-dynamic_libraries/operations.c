@@ -9,7 +9,7 @@
  */
 int add(int a, int b)
 {
-    return (a + b);
+	return (a + b);
 }
 
 /**
@@ -21,7 +21,7 @@ int add(int a, int b)
  */
 int sub(int a, int b)
 {
-    return (a - b);
+	return (a - b);
 }
 
 /**
@@ -33,12 +33,12 @@ int sub(int a, int b)
  */
 int mul(int a, int b)
 {
-    return (a * b);
+	return (a * b);
 }
 
 
 /**
- * my_div - Divides two integers
+ * custom_div - Divides two integers
  * @a: The first integer
  * @b: The second integer
  *
@@ -46,14 +46,14 @@ int mul(int a, int b)
  */
 int custom_div(int a, int b)
 {
-        if (b != 0)
-        {
-                return (a / b);
-        }
-        else
-        {
-                return (0);
-        }
+	if (b != 0)
+	{
+		return (a / b);
+	}
+	else
+	{
+		return (0);
+	}
 }
 
 /**
@@ -65,12 +65,12 @@ int custom_div(int a, int b)
  */
 int mod(int a, int b)
 {
-        if (b != 0)
-        {
-                return (a % b);
- }
-        else
-        {
-                return (0);
-        }
+	if (b != 0)
+	{
+		return (a % b);
+	}
+	else
+	{
+		return (0);
+	}
 }
