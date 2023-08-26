@@ -38,13 +38,13 @@ int mul(int a, int b)
 
 
 /**
- * div - Divides two integers
+ * my_div - Divides two integers
  * @a: The first integer
  * @b: The second integer
  *
  * Return: The quotient of a and b
  */
-int my_div(int a, int b)
+int custom_div(int a, int b)
 {
         if (b != 0)
         {
