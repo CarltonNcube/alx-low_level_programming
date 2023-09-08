@@ -26,6 +26,6 @@ void hash_table_print(const hash_table_t *ht)
 		first = 0;
 		node = node->next;
 		}
-    	}
+	}
 	printf("}\n");
 }
