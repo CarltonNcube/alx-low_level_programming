@@ -1,5 +1,4 @@
 #include "search_algos.h"
-#include <stdio.h>
 
 /**
  * linear_skip - Searches for a value in a sorted skip list of integers
@@ -10,35 +9,41 @@
  */
 skiplist_t *linear_skip(skiplist_t *list, int value)
 {
-	if (list == NULL)
-		return NULL;
+	skiplist_t *last = list;
 
-	skiplist_t *express = list;
-	skiplist_t *prev;
+	if (!list)
+		return (NULL);
 
-	while (express->express != NULL && express->express->n < value)
+	while (list->n < value)
 	{
-		prev = express;
-		express = express->express;
-		printf("Value checked at index [%lu] = [%d]\n", express->index, express->n);
+		if (!list->express)
+			break;
+		last = list;
+		list = list->express;
+		printf("Value checked at index [%lu] = [%d]\n", list->index, list->n);
 	}
 
-	printf("Value found between indexes [%lu] and [%lu]\n", prev->index, express->index);
-
-	skiplist_t *current = prev;
-	while (current->next != NULL && current->next->n < value)
+	if (list->n >= value)
 	{
-		current = current->next;
-		printf("Value checked at index [%lu] = [%d]\n", current->index, current->n);
+		printf("Value found between indexes [%lu] and [%lu]\n",
+			   last->index, list->index);
+		list = last;
+	}
+	else
+	{
+		for (last = list; last->next; last = last->next)
+			;
+		printf("Value found between indexes [%lu] and [%lu]\n",
+			   list->index, last->index);
 	}
 
-	printf("Value checked at index [%lu] = [%d]\n", current->index, current->n);
-
-	if (current->next != NULL && current->next->n == value)
+	while (list)
 	{
-		printf("Value checked at index [%lu] = [%d]\n", current->next->index, current->next->n);
-		return current->next;
+		printf("Value checked at index [%lu] = [%d]\n", list->index, list->n);
+		if (list->n == value)
+			return (list);
+		list = list->next;
 	}
 
-	return NULL;
+	return (NULL);
 }
