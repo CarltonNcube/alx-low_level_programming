@@ -1,11 +1,12 @@
 #include "search_algos.h"
-#include <stdio.h>
 
 /**
- * exponential_search - Searches for a value in a sorted array using Exponential search
+ * exponential_search - Searches for a value in a sorted array using
+ *                      exponential search
  * @array: Pointer to the first element of the array to search in
  * @size: Number of elements in array
  * @value: Value to search for
+ *
  * Return: The first index where value is located, or -1 if not found
  */
 int exponential_search(int *array, size_t size, int value)
@@ -21,36 +22,40 @@ int exponential_search(int *array, size_t size, int value)
 		bound *= 2;
 	}
 
-	min = bound / 2;
-	bound = (bound < size - 1) ? bound : size - 1;
+	min = (bound / 2) < size - 1 ? (bound / 2) : size - 1;
 
-	printf("Value found between indexes [%lu] and [%lu]\n", min, bound);
+	printf("Value found between indexes [%lu] and [%lu]\n", bound / 2, min);
 
-	return binary_search(array, min, bound, value);
+	return binary_search(array, size, value);
 }
 
 /**
- * binary_search - Searches for a value in a sorted array using Binary search
- * @array: Pointer to the first element of the array to search in
- * @low: Starting index of the search range
- * @high: Ending index of the search range
+ * binary_search - Searches for a value in a sorted array using binary search
+ * @array: Pointer to the first element of the array
+ * @size: Number of elements in the array
  * @value: Value to search for
- * Return: The index where value is located, or -1 if not found
+ *
+ * Return: The index where the value is located, or -1 if not found
  */
-int binary_search(int *array, size_t low, size_t high, int value)
+int binary_search(int *array, size_t size, int value)
 {
-	size_t mid;
+	size_t low, high, mid;
+
+	low = 0;
+	high = size - 1;
 
 	while (low <= high)
 	{
-		printf("Searching in array: %d", array[low]);
-
-		for (size_t i = low + 1; i <= high; i++)
-			printf(", %d", array[i]);
-
-		printf("\n");
-
 		mid = (low + high) / 2;
+
+		printf("Searching in array: ");
+		for (low = 0; low <= high; low++)
+		{
+			printf("%d", array[low]);
+			if (low < high)
+				printf(", ");
+		}
+		printf("\n");
 
 		if (array[mid] == value)
 			return mid;
